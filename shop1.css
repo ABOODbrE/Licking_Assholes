@@ -1,0 +1,64 @@
+/* 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+font-family: 'Droid Sans', sans-serif;
+}*/
+
+.prod{width: 250px;  background-color:yellow;}
+
+.po{ font-size:25px; text-align: center; color:HotPink;}
+img { float:center; }
+.pt{ font-size:17px; text-align: center; color :white; }
+.ptt { font-size:20px; text-align: center; color:green;}
+del{ color:red; }
+
+.middle{width:50%; height:50%; margin-bottom:50%; margin-top:50%; margin:50%;}
+
+/* التكيف مع مختلف الشاشات   max-width: 750px; */
+@media screen and (max-width: 768px) {
+.prod {
+        width: 100%;
+        padding: 20px;
+        float:right; 
+        background-color:red;
+    }
+
+}
+        
+@media (min-width: 992px) {
+
+}
+        
+@media (min-width: 1200px) {
+
+}
+        
+/* محتوى رئيسي */
+        
+.card { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px 
+rgba(0, 0, 0, 0.05);
+flex: 1 1 300px; transition: transform 0.3s ease;
+}
+        
+.card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); }
+        
+.card h2 { color: #2575fc;  margin-bottom: 15px;  padding-bottom: 10px; 
+border-bottom: 2px solid #f0f0f0; }
+
+ /* تأثيرات للهواتف */
+@media (max-width: 767px) {
+header p { font-size: 1rem; }
+.card{ flex: 1 1 100%; }
+            
+}
+        
+/* تأثيرات للأجهزة اللوحية */
+@media (min-width: 768px) and (max-width: 991px) {
+.card { flex: 1 1 calc(50% - 20px); }
+
+}
