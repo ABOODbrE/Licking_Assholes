@@ -25,7 +25,7 @@ del{ color:red; }
         width: 100%;
         padding: 20px;
         float:right; 
-        background-color:red;
+        background-color:#7c0a02;
     }
 
 }
@@ -60,5 +60,6 @@ header p { font-size: 1rem; }
 /* تأثيرات للأجهزة اللوحية */
 @media (min-width: 768px) and (max-width: 991px) {
 .card { flex: 1 1 calc(50% - 20px); }
+
 
 }
