@@ -9,24 +9,21 @@ body {
 font-family: 'Droid Sans', sans-serif;
 }*/
 
-.prod{width: 250px;  background-color:yellow;}
+.prod{ width: 250px; float:left; height:250px; margin:20px; }
 
 .po{ font-size:25px; text-align: center; color:HotPink;}
 img { float:center; }
-.pt{ font-size:17px; text-align: center; color :white; }
-.ptt { font-size:20px; text-align: center; color:green;}
-del{ color:red; }
+.pt{ font-size:25px; text-align: center; color :#ff55a3; }
 
 .middle{width:50%; height:50%; margin-bottom:50%; margin-top:50%; margin:50%;}
 
 /* التكيف مع مختلف الشاشات   max-width: 750px; */
 @media screen and (max-width: 768px) {
 .prod {
-        width: 100%;
-        padding: 20px;
-        float:right; 
-        background-color:green;
-    }
+       
+        
+  
+	}
 
 }
         
@@ -63,4 +60,3 @@ header p { font-size: 1rem; }
 
 
 }
-
