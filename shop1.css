@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 10px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -160,3 +160,4 @@ css
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 هذا التنسيق سيعمل بشكل ممتاز على جميع الأجهزة! 📱💻🖥️
+
