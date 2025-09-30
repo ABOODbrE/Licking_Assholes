@@ -1,1 +1,162 @@
+/* تنسيق الحاوية الرئيسية */
+.cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* تنسيق كل منتج */
+.prod {
+    background-color: #fff; /* 	#ff91af */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.prod:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* تنسيق الروابط */
+.prod a {
+    text-decoration: none;
+    color: 	inherit;
+    display: block;
+    padding: 15px;
+}
+
+/* تنسيق الصور */
+.prod img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* تنسيق النص */
+.pt {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 0 0 0;
+    color: 	#ff91af;  
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Media Queries للتجاوب */
+
+/* للأجهزة اللوحية */
+@media (max-width: 768px) {
+    .cont {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .prod img {
+        max-width: 250px;
+    }
+    
+    .pt {
+        font-size: 1.1rem;
+    }
+}
+
+/* للهواتف المحمولة */
+@media (max-width: 480px) {
+    .cont {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .prod a {
+        padding: 10px;
+    }
+    
+    .prod img {
+        max-width: 200px;
+    }
+    
+    .pt {
+        font-size: 1rem;
+        margin: 10px 0 0 0;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 320px) {
+    .cont {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 8px;
+    }
+    
+    .prod img {
+        max-width: 180px;
+    }
+    
+    .pt {
+        font-size: 0.9rem;
+    }
+}
+
+/* للشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .cont {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* تأثيرات إضافية للتفاعل */
+.prod:active {
+    transform: scale(0.98);
+}
+
+/* تحسينات للأداء والوصول */
+.prod img {
+    transition: opacity 0.3s ease;
+}
+
+.prod img:hover {
+    opacity: 0.9;
+}
+
+/* ضمان أن الصور لا تتعدى الحاوية */
+.prod {
+    max-width: 100%;
+}
+/*
+المميزات التي يوفرها هذا التنسيق:
+تخطيط Grid متجاوب يتكيف مع جميع أحجام الشاشات
+
+تصميم Mobile First يبدأ من الهواتف الصغيرة
+
+تأثيرات تفاعلية عند المرور والضغط
+
+ظلال ونعومة لمظهر احترافي
+
+تحسينات للأداء والسرعة
+
+تجاوب كامل من 320px إلى 1200px+
+
+يمكنك إضافة تنسيقات إضافية مثل:
+css*/
+/* ألوان مخصصة */
+.prod {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.pt {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
