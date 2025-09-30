@@ -10,7 +10,7 @@
 
 /* تنسيق كل منتج */
 .prod {
-    background-color: #fff; /* 	#ff91af */
+    background-color:#ff91af; /*   #fff	 */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -160,3 +160,4 @@ css*/
     color: white;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
+
