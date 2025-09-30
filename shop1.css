@@ -46,7 +46,7 @@
 .pt {
     font-size: 1.2rem;
     font-weight: bold;
-    margin: 15px 0 0 0;
+    margin: 8px 0 0 0;
     color: 	#ff91af;  
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -160,3 +160,4 @@ css*/
     color: white;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
+
