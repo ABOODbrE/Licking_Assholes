@@ -105,7 +105,7 @@
 
 /* بطاقة المنتج */
 .itemp {
-    background: #ffffff;
+    background: #ff91af /*#ffffff*/;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -113,7 +113,7 @@
     border: 1px solid #e8e8e8;
     width: 100%;
     max-width: 300px;
-    margin-left:10px;
+	margin-left:10px;
 }
 
 .itemp:hover {
@@ -135,7 +135,7 @@
     padding-bottom: 75%; /* نسبة 4:3 */
     position: relative;
     overflow: hidden;
-    background: #f8f9fa;
+    background: #ff91af /* #f8f9fa */;
 }
 
 .prodim {
@@ -169,7 +169,7 @@
 }
 
 .disc {
-    font-size: 0.95em;
+    font-size: 18px/* 0.95em */;
     color: #666;
     margin-bottom: 12px;
     line-height: 1.4;
@@ -178,11 +178,11 @@
 .price {
     font-size: 1.3em;
     font-weight: 700;
-    color: #2c5aa0;
+    color: green /* #2c5aa0 */ ;
 }
 
 .price del {
-    color: #999;
+    color: red /* #999 */;
     font-size: 0.85em;
     margin-left: 8px;
     font-weight: 500;
@@ -369,5 +369,3 @@
         background: #4a5568;
     }
 }
-
-
