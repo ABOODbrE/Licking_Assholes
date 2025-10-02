@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .cont {
     /*
     display: grid;
@@ -89,3 +94,278 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
+/* الحاوية الرئيسية */
+.itemcont {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* بطاقة المنتج */
+.itemp {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #e8e8e8;
+    width: 100%;
+    max-width: 300px;
+}
+
+.itemp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* رابط المنتج */
+.prodli {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+/* حاوية الصورة */
+.imgw {
+    width: 100%;
+    padding-bottom: 75%; /* نسبة 4:3 */
+    position: relative;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.prodim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.itemp:hover .prodim {
+    transform: scale(1.05);
+}
+
+/* معلومات المنتج */
+.prodin {
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.itempt {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.disc {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #2c5aa0;
+}
+
+.price del {
+    color: #999;
+    font-size: 0.85em;
+    margin-left: 8px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+/* Media Queries للتجاوب */
+@media (max-width: 1200px) {
+    .itemcont {
+        max-width: 992px;
+        padding: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .itemcont {
+        max-width: 768px;
+        padding: 15px;
+    }
+    
+    .itemp {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .itemcont {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .itemp {
+        max-width: 260px;
+        border-radius: 10px;
+    }
+    
+    .prodin {
+        padding: 18px 12px;
+    }
+    
+    .itempt {
+        font-size: 1.3em;
+    }
+    
+    .disc {
+        font-size: 0.9em;
+    }
+    
+    .price {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .itemcont {
+        padding: 12px;
+    }
+    
+    .itemp {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    .prodin {
+        padding: 15px 10px;
+    }
+    
+    .itempt {
+        font-size: 1.2em;
+    }
+    
+    .disc {
+        font-size: 0.85em;
+    }
+    
+    .price {
+        font-size: 1.1em;
+    }
+    
+    .imgw {
+        padding-bottom: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .itemcont {
+        padding: 10px;
+    }
+    
+    .prodin {
+        padding: 12px 8px;
+    }
+    
+    .itempt {
+        font-size: 1.1em;
+    }
+    
+    .disc {
+        font-size: 0.8em;
+    }
+    
+    .price {
+        font-size: 1em;
+    }
+    
+    .imgw {
+        padding-bottom: 65%;
+    }
+}
+
+@media (max-width: 360px) {
+    .itemcont {
+        padding: 8px;
+    }
+    
+    .prodin {
+        padding: 10px 6px;
+    }
+    
+    .itempt {
+        font-size: 1em;
+    }
+    
+    .disc {
+        font-size: 0.75em;
+    }
+    
+    .price {
+        font-size: 0.95em;
+    }
+    
+    .imgw {
+        padding-bottom: 60%;
+    }
+}
+
+/* للأجهزة ذات الشاشات الكبيرة جداً */
+@media (min-width: 1400px) {
+    .itemcont {
+        max-width: 1320px;
+    }
+    
+    .itemp {
+        max-width: 320px;
+    }
+    
+    .itempt {
+        font-size: 1.5em;
+    }
+    
+    .price {
+        font-size: 1.4em;
+    }
+}
+
+/* للأجهزة التي لا تدعم hover (الهواتف) */
+@media (hover: none) {
+    .itemp:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .itemp:active {
+        transform: scale(0.98);
+    }
+}
+
+/* دعم الوضع الداكن */
+@media (prefers-color-scheme: dark) {
+    .itemp {
+        background: #2d3748;
+        border-color: #4a5568;
+    }
+    
+    .itempt {
+        color: #e2e8f0;
+    }
+    
+    .disc {
+        color: #a0aec0;
+    }
+    
+    .imgw {
+        background: #4a5568;
+    }
+}
+
