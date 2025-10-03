@@ -100,9 +100,10 @@
 
 .contp {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            /*             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 20px;
-            max-width: 1500px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -197,6 +198,7 @@
                 max-width: 250px;
             }
         }
+
 
 
 
