@@ -135,13 +135,13 @@
             font-size: 1.5em;
             font-weight: bold;
             margin: 10px 0 5px 0;
-            color: white;
+            color: blue;
         }
 
-        .disc {
-            font-size: 1em;
+       .disc {
+            font-size: 18px/* 1em */;
             margin: 5px 0;
-            color: #fff;
+            color: yellow/*#fff*/;
             opacity: 0.9;
         }
 
@@ -149,11 +149,11 @@
             font-size: 1.3em;
             font-weight: bold;
             margin: 10px 0;
-            color: white;
+            color: green;
         }
 
         .price del {
-            color: #ffeb3b;
+            color: red;
             margin-right: 10px;
             opacity: 0.8;
         }
@@ -193,4 +193,5 @@
                 max-width: 250px;
             }
         }
+
 
