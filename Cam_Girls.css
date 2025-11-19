@@ -7,7 +7,7 @@
         }
 
         .girl-card {
-            background: white;
+            background: #ff91af;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -39,7 +39,7 @@
             font-weight: bold;
             font-size: 16px;
             color: #333;
-            background: #f9f9f9;
+            background: #ff91af;
             margin: 0;
         }
 
