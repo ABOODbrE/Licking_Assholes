@@ -239,6 +239,21 @@ details{
 
 /* summary */
 
+/* =========================
+   iframe
+========================= */
+.details-scroll iframe{
+    width:100%;
+    height:250px;
+
+    /*margin-top:12px;*/
+
+    border:none;
+    border-radius:12px;
+
+    /*background:#fff;*/
+}
+
 .summaryp  {
 
     text-align:center;
@@ -349,6 +364,10 @@ details{
     .PRev1{
         font-size:24px;
     }
+	
+	 .details-scroll iframe{
+        height:320px;
+    }
 }
 
 /* =========================
@@ -366,6 +385,10 @@ details{
 
     .imgpt1{
         font-size:14px;
+    }
+	
+	 .details-scroll iframe{
+        height:250px;
     }
 }
 .Ads_Midlle_Details{
