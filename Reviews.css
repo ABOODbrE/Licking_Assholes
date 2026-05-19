@@ -1,371 +1,377 @@
-/* =========================
-   الحاوية الرئيسية
-========================= */
+/*=================================
+  الحاوية الرئيسية
+=================================*/
 .Rev1{
     width:100%;
-    padding:25px;
-    box-sizing:border-box; 
+    max-width:1600px;
 
+    margin:auto;
+
+    padding:20px;
 }
 
-/* =========================
-   عنوان القسم
-========================= */
-.PRev1{
-    width:100%;
+/*=================================
+  العنوان الرئيسي
+=================================*/
+.summaryp1{
+
+    cursor:pointer;
+
+    padding:18px 24px;
+
+    font-size:1.4rem;
+    font-weight:700;
     text-align:center;
 
-    font-size:clamp(22px,3vw,38px);
-    font-weight:700;
+    color:#ff91af;
 
-    
-    color:/*#ffffff  #ff5800 */ #ff4500;
-    
-	margin-bottom:30px;
+    border-radius:24px;
 
-    text-shadow:0 2px 8px rgba(0,0,0,0.4);
+    background:
+    rgba(255,255,255,0.08);
 
-    word-break:break-word;
-}
-
-/* =========================
-   Grid Layout
-========================= */
-.DPRev1{
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-    gap:25px;
-
-    align-items:start;
-}
-
-/* =========================
-   Glass Card
-========================= */
-.Rev-If{
-
-    background:rgba(255,255,255,0.12);
+    border:
+    1px solid rgba(255,255,255,0.10);
 
     backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
 
-    border:1px solid rgba(255,255,255,0.18);
+    transition:0.35s ease;
+}
 
-    border-radius:22px;
+.summaryp1:hover{
+    background:
+    rgba(255,255,255,0.14);
+}
 
-    padding:18px;
+.summaryp1::-webkit-details-marker{
+    display:none;
+}
+
+/*=================================
+  الشبكة
+=================================*/
+.DPRev1{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:28px;
+
+    margin-top:28px;
+}
+
+/*=================================
+  الكارت
+=================================*/
+.Rev-If{
 
     overflow:hidden;
 
+    border-radius:26px;
+
+    background:
+    rgba(255,255,255,0.06);
+
+    border:
+    1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
     box-shadow:
-    0 8px 32px rgba(0,0,0,0.25);
+    0 10px 30px rgba(0,0,0,0.25);
 
     transition:0.35s ease;
 }
 
-/* Hover */
 .Rev-If:hover{
 
-    transform:
-    translateY(-6px)
-    scale(1.01);
-
-    background:rgba(255,255,255,0.16);
+    transform:translateY(-8px);
 
     box-shadow:
-    0 12px 40px rgba(0,0,0,0.35);
+    0 14px 35px rgba(0,0,0,0.35);
 }
 
-/* =========================
-   الصور
-========================= */
+/*=================================
+  الصورة
+=================================*/
 .Rev-If-img{
 
     width:100%;
-    height:220px;
+
+    height:250px;
 
     object-fit:cover;
 
-    border-radius:16px;
-
     display:block;
 
-    background:
-    linear-gradient(135deg,#64748b,#94a3b8);
-
-    border:1px solid rgba(255,255,255,0.15);
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
 }
 
-/* =========================
-   النص
-========================= */
+/*=================================
+  النص والرابط
+=================================*/
 .imgpt1{
-
-    margin-top:15px;
+    
+    padding:20px;
 
     text-align:center;
-
-    color:#ffffff ;
-
-    font-size:
-    clamp(15px,2vw,18px);
-
-    line-height:1.6;
-
-    overflow-wrap:anywhere;
+	
 }
 
-/* =========================
-   الروابط
-========================= */
 .alink1{
-
-    color:#ff91af /*#60a5fa*/;
 
     text-decoration:none;
 
+    color:/*#ffffff*/#fb607f;
+
+    font-size:1.2rem;
     font-weight:700;
 
-    transition:0.3s;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:10px;
+
+    transition:0.3s ease;
 }
 
 .alink1:hover{
-
-    color:#93c5fd;
-
-    text-decoration:underline;
+    color:#38bdf8;
 }
 
-/* =========================
-   SVG
-========================= */
+/*=================================
+  الأيقونة
+=================================*/
 .svglink{
 
-    width:16px;
-    height:16px;
+    width:20px;
+    height:30px;
 
     fill:currentColor;
-
-    vertical-align:middle;
-
-    margin-left:6px;
 }
 
-/* =========================
-   details
-========================= */
-details{
-
-    margin-top:18px;
-	
-}
+/*=================================
+  صندوق التفاصيل
+=================================*/
 .details-scroll{
-    width:100%;
-    border-radius:12px;
+
+    margin:0 18px 20px;
+
     overflow:hidden;
-	color:black#ff91af;
-	
-}
 
-/* زر الفتح */
-.details-scroll summary{
-    cursor:pointer;
-    padding:12px;
-    background:/*#2563eb*/;
-    color:#fff;
-    font-weight:bold;
-}
+    border-radius:20px;
 
-/* المحتوى */
-.details-content{
-    max-height:200px;   /* أقصى ارتفاع */
-    overflow-y:auto;    /* تفعيل Scroll عمودي */
-
-    padding:12px;
-
-    /* background:;
-    color:#ff91af; */
-	
-	background:rgba(15,23,42,0.45);
-    color:#f8fafc;
-	
-    font-size:25px;
-    line-height:1.7;
-	
-}
-
-/* شكل الـ Scroll */
-.details-content::-webkit-scrollbar{
-    width:12px;
-	background:/*#ff91af*/;
-    color:black;
-}
-
-.details-content::-webkit-scrollbar-thumb{
-    background:#3b82f6;
-    border-radius:10px;
-}
-
-
-.summaryp1{
-	
-	text-align:center;
-	margin:20px 20px;
-    color:/*#ffffff  #ff5800 */ #ff4500;
-	font-size:25px;
-	
-	background:
-    rgba(255,255,255,0.12);
-
-    border:
-    1px solid rgba(255,255,255,0.15);
-
-
-    padding:12px 16px;
-
-    border-radius:14px;
-
-    cursor:pointer;
-
-    /*    font-weight:600;*/
-    transition:0.3s;
-
-    backdrop-filter:blur(10px);
-	
-}
-
-/* summary */
-
-.summaryp  {
-
-    text-align:center;
-	
     background:
-    rgba(255,255,255,0.12);
+    rgba(255,255,255,0.04);
 
     border:
-    1px solid rgba(255,255,255,0.15);
+    1px solid rgba(255,255,255,0.08);
+}
 
-    color:#ffffff;
-
-    padding:12px 16px;
-
-    border-radius:14px;
+/*=================================
+  زر التفاصيل
+=================================*/
+.summaryp{
 
     cursor:pointer;
 
-    font-weight:600;
+    padding:16px 18px;
 
-    transition:0.3s;
+    color:#ff4500 /*#ffffff*/;
+    text-align:center;
+    font-size:1rem;
+    font-weight:700;
 
-    backdrop-filter:blur(10px);
+    background:
+    rgba(255,255,255,0.08);
+
+    transition:0.3s ease;
 }
 
 .summaryp:hover{
-
     background:
-    rgba(255,255,255,0.18);
+    rgba(255,255,255,0.14);
 }
 
-/* =========================
-   textarea
-========================= */
-.textareap{
+.summaryp::-webkit-details-marker{
+    display:none;
+}
+
+/*=================================
+  محتوى التفاصيل
+=================================*/
+.details-content{
 
     width:100%;
 
-    min-height:140px;
-
-    margin-top:14px;
-
-    padding:14px;
-
-    box-sizing:border-box;
-
-    border-radius:16px;
-
-    border:
-    1px solid rgba(255,255,255,0.15);
+    padding:2px;
 
     background:
-    rgba(15,23,42,0.45);
+    rgba(15,23,42,0.90);
 
-    color:#f8fafc;
-
-    font-size:14px;
-
-    line-height:1.7;
-
-    font-family:Consolas, monospace;
-
-    resize:vertical;
-
-    overflow-wrap:anywhere;
-
-    outline:none;
+    border-top:
+    1px solid rgba(255,255,255,0.08);
 }
 
-/* placeholder */
-.textareap::placeholder{
-    color:#cbd5e1;
+/*=================================
+  div الخاص بالنص
+=================================*/
+.Iframe_text_d{
+
+    width:90%;
+
+    font-size:22px;
+
+    line-height:2.1;
+
+    color:#f1f5f9;
+
+    background:
+    rgba(15,23,42,0.95);
+
+    padding:20px;
+
+    border-radius:18px;
+
+    overflow:hidden;
 }
 
-/* =========================
-   Scroll جميل
-========================= */
-.textareap::-webkit-scrollbar{
+/*=================================
+  iframe
+=================================*/
+.Iframe_text{
+
+    width:100%;
+
+    height:450px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:/*#ffffff*/#030303;  
+    font-siz:25px;
+	color:#ff91af/* #ff91af #ffffff*/ ; 
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.35);
+}
+
+/*=================================
+  تحسين النص داخل iframe
+  أضف هذا داخل text.html
+=================================*/
+
+
+
+/*=================================
+  السكرول
+=================================*/
+::-webkit-scrollbar{
     width:8px;
 }
 
-.textareap::-webkit-scrollbar-thumb{
-    background:#60a5fa;
+::-webkit-scrollbar-track{
+    background:rgba(255,255,255,0.05);
+}
+
+::-webkit-scrollbar-thumb{
+    background:#38bdf8;
     border-radius:20px;
 }
 
-/* =========================
-   Responsive
-========================= */
+/*=================================
+  التابلت
+=================================*/
+@media (max-width:992px){
+
+    .DPRev1{
+
+        grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+    }
+
+    .Rev-If-img{
+        height:220px;
+    }
+
+    .Iframe_text{
+        height:600px;
+    }
+
+    .Iframe_text_d{
+        font-size:22px;
+    }
+}
+
+/*=================================
+  الهواتف
+=================================*/
 @media (max-width:768px){
 
     .Rev1{
         padding:14px;
     }
 
-    .DPRev1{
-        grid-template-columns:1fr;
+    .summaryp1{
+
+        font-size:1.1rem;
+
+        padding:16px;
     }
 
     .Rev-If{
-        padding:14px;
+        border-radius:22px;
     }
 
     .Rev-If-img{
-        height:auto;
+        height:210px;
     }
 
-    .PRev1{
-        font-size:24px;
+    .alink1{
+        font-size:1rem;
+    }
+
+    .Iframe_text{
+        height:500px;
+    }
+
+    .Iframe_text_d{
+        font-size:20px;
+        padding:16px;
     }
 }
 
-/* =========================
-   Responsive للشاشات الصغيرة
-========================= */
+/*=================================
+  الشاشات الصغيرة
+=================================*/
 @media (max-width:480px){
 
-    .summaryp{
-        font-size:14px;
+    .DPRev1{
+        gap:18px;
     }
 
-    .textareap{
-        font-size:13px;
+    .summaryp1{
+        font-size:1rem;
     }
 
-    .imgpt1{
-        font-size:14px;
+    .Rev-If-img{
+        height:190px;
+    }
+
+    .Iframe_text{
+        height:420px;
+    }
+
+    .Iframe_text_d{
+        font-size:18px;
     }
 }
 .Ads_Midlle_Details{
