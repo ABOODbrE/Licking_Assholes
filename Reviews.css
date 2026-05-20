@@ -1,4 +1,8 @@
 /*=================================
+  إعدادات عامة
+=================================*/
+
+/*=================================
   الحاوية الرئيسية
 =================================*/
 .Rev1{
@@ -207,67 +211,37 @@
   محتوى التفاصيل
 =================================*/
 .details-content{
-
-    width:100%;
-
-    padding:2px;
-
-    background:
-    rgba(15,23,42,0.90);
-
-    border-top:
-    1px solid rgba(255,255,255,0.08);
+margin-top:15px;
+  padding:16px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.07);
+  color:#ddd;
+  font-size:14px;
+  line-height:1.9;
+  overflow-wrap:break-word;
+  max-height:280px;
+  overflow-y:auto;
 }
+/* Scrollbar */
+.details-content::-webkit-scrollbar{
+  width:7px;
+}
+
+.details-content::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+.details-content::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,0.18);
+  border-radius:20px;
+}
+.P-details-content{font-size:22px;}
 
 /*=================================
   div الخاص بالنص
 =================================*/
-.Iframe_text_d{
 
-    width:90%;
-
-    font-size:22px;
-
-    line-height:2.1;
-
-    color:#f1f5f9;
-
-    background:
-    rgba(15,23,42,0.95);
-
-    padding:20px;
-
-    border-radius:18px;
-
-    overflow:hidden;
-}
-
-/*=================================
-  iframe
-=================================*/
-.Iframe_text{
-
-    width:100%;
-
-    height:450px;
-
-    border:none;
-
-    border-radius:18px;
-
-    background:/*#ffffff*/#030303;  
-    font-siz:25px;
-	color:#ff91af/* #ff91af #ffffff*/ ; 
-    overflow:hidden;
-
-    box-shadow:
-    0 8px 25px rgba(0,0,0,0.35);
-}
-
-/*=================================
-  تحسين النص داخل iframe
-  أضف هذا داخل text.html
-=================================*/
 
 
 
@@ -292,23 +266,9 @@
 =================================*/
 @media (max-width:992px){
 
-    .DPRev1{
-
-        grid-template-columns:
-        repeat(auto-fit,minmax(280px,1fr));
-    }
-
-    .Rev-If-img{
-        height:220px;
-    }
-
-    .Iframe_text{
-        height:600px;
-    }
-
-    .Iframe_text_d{
-        font-size:22px;
-    }
+   .DPRev1{
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  }
 }
 
 /*=================================
@@ -339,14 +299,9 @@
         font-size:1rem;
     }
 
-    .Iframe_text{
-        height:500px;
-    }
+  
 
-    .Iframe_text_d{
-        font-size:20px;
-        padding:16px;
-    }
+    
 }
 
 /*=================================
@@ -366,13 +321,9 @@
         height:190px;
     }
 
-    .Iframe_text{
-        height:420px;
-    }
+  
 
-    .Iframe_text_d{
-        font-size:18px;
-    }
+   
 }
 .Ads_Midlle_Details{
 border-radius:40px;
