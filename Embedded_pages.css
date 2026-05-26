@@ -1,0 +1,67 @@
+/* الحاوية الرئيسية */
+.civ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* توسيط العناصر */
+    gap: 20px; /* مسافة بين العناصر */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* العنصر الداخلي */
+.civ1 {
+    flex: 1 1 280px; /* ينمو وينكمش مع عرض لا يقل عن 280px */
+    max-width: 100%;
+    text-align: center;
+    background: transparent; /* خلفية شفافة */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.civ1:hover {
+    transform: scale(1.02); /* تأثير بسيط عند المرور */
+}
+
+/* الرابط */
+.a-civ1 {
+    display: block;
+    text-decoration: none;
+	font-size:22px;
+}
+
+/* الصورة */
+.img-civ1 {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+/* النص */
+.p-civ1 {
+    background: transparent; /* خلفية شفافة */
+    color: #ffffff; /* لون نص واضح (أبيض) */
+    font-size: 1.2rem;
+    font-weight: bold; /* خط بارز */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* ظل للنص لتحسين القراءة على أي خلفية */
+    padding: 12px;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+    word-wrap: break-word; /* كسر الكلمات الطويلة */
+}
+
+/* تحسين للشاشات الصغيرة جدًا (أقل من 480px) */
+@media (max-width: 480px) {
+    .p-civ1 {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    
+    .civ {
+        gap: 15px;
+        padding: 10px;
+    }
+}
