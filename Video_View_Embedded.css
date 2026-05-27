@@ -1,187 +1,162 @@
-/* الحاوية الرئيسية */
+/* الحاوية الأساسية */
 .EP{
-    width: 100%;
     max-width: 1000px;
+    width: 100%;
     margin: auto;
     padding: 15px;
     box-sizing: border-box;
+    color: #fff;
     font-family: Arial, sans-serif;
 }
 
-/* الفيديو Responsive */
-.video-container{
-    position: relative;
+/* iframe ريسبونسف */
+.EP iframe{
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 14px;
-    background: #000;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+    display: block;
 }
 
-.video-container iframe{
+/* صورة الإعلان */
+.Ads-Under-Iframe{
+    margin: 15px 0;
+    text-align: center;
+}
+
+.My-Ads-Under-Iframe{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* العنوان */
+.Title_video{
+    font-size: 26px;
+    font-weight: bold;
+    margin: 15px 0 10px;
+}
+
+/* القناة */
+.a-chanel{
+    text-decoration: none;
+}
+
+.p-chanel{
+    background: #1e1e1e;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* الوصف */
+.description{
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.P-descr{
+    font-weight: bold;
+    color: #fff;
+}
+
+/* التغليف العام */
+.infoWrapper{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* الأقسام */
+.categsWrapper,
+.tagsWrapper{
+    flex: 1;
+    min-width: 250px;
+}
+
+/* عنوان التاجات */
+.Video_tags{
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+/* جعل التاجات بجانب بعضها */
+.a-span-item{
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* شكل التاج */
+.Video_span{
+    background: #2b2b2b;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 30px;
+    display: inline-block;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.Video_span:hover{
+    background: #ff3c3c;
+}
+
+/* تجاوب مع الجوال */
+@media (max-width: 768px){
+
+    .EP iframe{
+        height: 250px;
+    }
+
+    .Title_video{
+        font-size: 22px;
+    }
+
+    .Video_tags{
+        font-size: 18px;
+    }
+
+    .infoWrapper{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px){
+
+    .EP{
+        padding: 10px;
+    }
+
+    .EP iframe{
+        height: 210px;
+    }
+
+    .Video_span{
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+
+    .Title_video{
+        font-size: 20px;
+    }
+}
+.video-container1{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-container1 iframe{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
-}
-
-/* عنوان الفيديو */
-.Title_video{
-    margin-top: 18px;
-    font-size: 26px;
-    font-weight: bold;
-    line-height: 1.6;
-    color: #fff;
-    word-break: break-word;
-}
-
-/* الوصف */
-.description{
-    margin-top: 20px;
-    padding: 18px;
-    background: #1c1c1c;
-    border-radius: 12px;
-    color: #ccc;
-    line-height: 1.9;
-    font-size: 22px;
-    word-break: break-word;
-}
-
-/* عنوان الوصف */
-.P-descr{
-    display: inline-block;
-    margin-bottom: 12px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-}
-
-/* أقسام */
-.Video_tags{
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #bf4f51;
-}
-
-.infoWrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
-
-.categsWrapper,
-.tagsWrapper{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-}
-
-.Video_tags{
-    width: 100%;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.a-span-item{
-    text-decoration: none;
-}
-
-.a-span-item br{
-    display: none;
-}
-
-.Video_span{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 14px;
-    background: #f1f1f1;
-    border-radius: 20px;
-    font-size: 14px;
-    color: #333;
-    transition: 0.3s;
-    white-space: nowrap;
-}
-
-.Video_span:hover{
-    background: #333;
-    color: #fff;
-}
-
-
-
-/* تابلت */
-@media (max-width: 768px){
-
-    .EP{
-        padding: 12px;
-    }
-
-    .Title_video{
-        font-size: 21px;
-    }
-
-    .description{
-        font-size: 15px;
-        padding: 15px;
-    }
-
-    .P-descr{
-        font-size: 18px;
-    }
-	
-	    .Video_span{
-        font-size: 13px;
-        padding: 7px 12px;
-    }
-
-}
-
-/* موبايل */
-@media (max-width: 480px){
-
-    .Title_video{
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
-    .description{
-        font-size: 14px;
-        line-height: 1.8;
-        padding: 14px;
-    }
-
-    .P-descr{
-        font-size: 17px;
-    }
-	
-	 .categsWrapper,
-    .tagsWrapper{
-        gap: 8px;
-    }
-
-    .Video_span{
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-
-    
-
-}
-.Ads-Under-Iframe{
-border-radius:40px;
-padding:20px 20px ;
-margin:20px 20px ;
-}
-.My-Ads-Under-Iframe{
-	height:180px;
-	border-radius:20px;
 }
