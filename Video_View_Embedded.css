@@ -65,49 +65,36 @@
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
-    color: #fff;
+    color: #bf4f51;
 }
 
 /* التصنيفات */
-.categoryWrapper{
-    margin-top: 25px;
-    display: flex;
+.tagsWrapper,
+.categsWrapper {
+	display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     align-items: center;
-}
-
-/* التاجات */
-.tagsWrapper{
-    margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
     gap: 10px;
-    align-items: center;
-	width:250px;
 }
 
-/* شكل العناصر */
-.Video_span{
-    display: inline-block;
-    padding: 8px 16px;
-    background: #292929;
-    color: #fff;
-    border-radius: 30px;
-    font-size: 14px;
-    transition: 0.3s;
+.Video_tags {
+    margin: 0;
+    font-weight: bold;
 }
 
-/* Hover */
-.Video_span:hover{
-    background: #ff0000;
-    transform: scale(1.05);
-}
-
-/* إزالة تنسيق الروابط */
-.item{
+.item {
     text-decoration: none;
 }
+
+.Video_span {
+    background: #ff91af;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+	color:black;
+}
+
+
 
 /* تابلت */
 @media (max-width: 768px){
