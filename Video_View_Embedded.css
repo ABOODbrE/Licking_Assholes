@@ -113,67 +113,55 @@ margin:20px 20px ;
 	border-radius:20px;
 }
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-.d-categs-tags {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* كل مجموعة (categories / tags) */
-.div-categs0,
-.div-tags0 {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* مهم عشان الشاشات الصغيرة */
-    gap: 10px;
-}
-
-/* العناوين */
-.p_categs0,
-.p_tags0 {
-    font-size:25px;
-    color:#c1cdcd;
-    margin: 0;
-    font-weight: bold;
-    white-space: nowrap;
-    
-}
-
-/* الروابط */
-.a-p-categs0,
-.a-p-tags0 {
-    text-decoration: none;
-}
-
-/* شكل الـ span */
-.Video_span1,
-.Video_span2 {
+.p-categs0{
     display: inline-block;
-    padding: 5px 12px;
-    background: #ff91af;
-    border-radius: 20px;
+    margin: 10px 8px 10px 0;
     font-size: 25px;
-    transition: 0.3s ease;
-    cursor: pointer;
+    font-weight: bold;
+    color: #222;
 }
 
-/* hover */
-.Video_span1:hover,
-.Video_span2:hover {
-    background: #333;
+.a-p-categs0{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    margin: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f5f5f5;
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+    word-break: break-word;
+}
+
+.a-p-categs0:hover{
+    background: #222;
     color: #fff;
+    border-color: #222;
 }
 
-/* تحسين التوافق مع الشاشات الصغيرة */
-@media (max-width: 600px) {
-  .div-categs0,
-  .div-tags0 {
-    gap: 6px;
-  }
+/* Responsive */
+@media (max-width: 768px){
+    .a-p-categs0{
+        padding: 7px 12px;
+        font-size: 14px;
+    }
 
-  .Video_span1,
-  .Video_span2 {
-    font-size: 13px;
-    padding: 3px 8px;
-  }
+    .p-categs0{
+        display: block;
+        margin-bottom: 10px;
+    }
 }
+
+@media (max-width: 480px){
+    .a-p-categs0{
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5px 0;
+    }
+}
+
