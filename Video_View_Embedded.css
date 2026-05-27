@@ -113,6 +113,7 @@ margin:20px 20px ;
 	border-radius:20px;
 }
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+/*
 .p-categs0{
     display: inline-block;
     margin: 10px 8px 10px 0;
@@ -143,7 +144,7 @@ margin:20px 20px ;
     border-color: #222;
 }
 
-/* Responsive */
+
 @media (max-width: 768px){
     .a-p-categs0{
         padding: 7px 12px;
@@ -164,4 +165,5 @@ margin:20px 20px ;
         margin: 5px 0;
     }
 }
+*/
 
