@@ -1,25 +1,21 @@
-/* الحاوية الأساسية */
 .EP{
-    max-width: 1000px;
     width: 100%;
+    max-width: 1000px;
     margin: auto;
     padding: 15px;
     box-sizing: border-box;
-    color: #fff;
-    font-family: Arial, sans-serif;
 }
 
-/* iframe ريسبونسف */
 .EP iframe{
     width: 100%;
     height: 450px;
     border: 0;
-    border-radius: 10px;
     display: block;
+    border-radius: 10px;
 }
 
-/* صورة الإعلان */
 .Ads-Under-Iframe{
+    width: 100%;
     margin: 15px 0;
     text-align: center;
 }
@@ -27,35 +23,35 @@
 .My-Ads-Under-Iframe{
     max-width: 100%;
     height: auto;
+    display: inline-block;
     border-radius: 8px;
 }
 
-/* العنوان */
 .Title_video{
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
-    margin: 15px 0 10px;
+    line-height: 1.5;
+    margin: 15px 0;
+    color: #fff;
+    word-wrap: break-word;
 }
 
-/* القناة */
 .a-chanel{
     text-decoration: none;
 }
 
 .p-chanel{
-    background: #1e1e1e;
-    padding: 10px 15px;
-    border-radius: 8px;
-    color: #fff;
-    display: inline-block;
-    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ccc;
+    margin: 10px 0;
 }
 
-/* الوصف */
 .description{
+    font-size: 16px;
     line-height: 1.8;
-    margin-bottom: 20px;
     color: #ddd;
+    margin: 15px 0;
+    word-wrap: break-word;
 }
 
 .P-descr{
@@ -63,100 +59,87 @@
     color: #fff;
 }
 
-/* التغليف العام */
-.infoWrapper{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* الأقسام */
-.categsWrapper,
-.tagsWrapper{
-    flex: 1;
-    min-width: 250px;
-}
-
-/* عنوان التاجات */
-.Video_tags{
-    font-size: 20px;
-    margin-bottom: 12px;
+.Video_Categ,
+.Video_Tag{
+    font-size: 18px;
     font-weight: bold;
-}
-
-/* جعل التاجات بجانب بعضها */
-.a-span-item{
-    text-decoration: none;
-    display: inline-block;
-    margin: 5px;
-}
-
-/* شكل التاج */
-.Video_span{
-    background: #2b2b2b;
+    margin: 20px 0 10px;
     color: #fff;
-    padding: 8px 14px;
-    border-radius: 30px;
-    display: inline-block;
-    transition: 0.3s;
-    font-size: 14px;
 }
 
-.Video_span:hover{
+.a-cat{
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 5px 0 0;
+}
+
+.span-cat{
+    display: inline-block;
+    padding: 8px 14px;
+    background: #222;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.span-cat:hover{
     background: #ff3c3c;
 }
 
-/* تجاوب مع الجوال */
-@media (max-width: 768px){
-
-    .EP iframe{
-        height: 250px;
-    }
-
-    .Title_video{
-        font-size: 22px;
-    }
-
-    .Video_tags{
-        font-size: 18px;
-    }
-
-    .infoWrapper{
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px){
+@media (max-width:768px){
 
     .EP{
         padding: 10px;
     }
 
     .EP iframe{
-        height: 210px;
-    }
-
-    .Video_span{
-        font-size: 13px;
-        padding: 7px 12px;
+        height: 300px;
     }
 
     .Title_video{
-        font-size: 20px;
+        font-size: 22px;
+    }
+
+    .p-chanel,
+    .Video_Categ,
+    .Video_Tag{
+        font-size: 16px;
+    }
+
+    .description{
+        font-size: 15px;
+    }
+
+    .span-cat{
+        font-size: 13px;
+        padding: 7px 12px;
     }
 }
-.video-container1{
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 */
-    overflow: hidden;
-    border-radius: 10px;
-}
 
-.video-container1 iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+@media (max-width:480px){
+
+    .EP iframe{
+        height: 220px;
+    }
+
+    .Title_video{
+        font-size: 19px;
+    }
+
+    .p-chanel,
+    .Video_Categ,
+    .Video_Tag{
+        font-size: 15px;
+    }
+
+    .description{
+        font-size: 14px;
+    }
+
+    .span-cat{
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
 }
