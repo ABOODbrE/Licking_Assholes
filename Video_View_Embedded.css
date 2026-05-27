@@ -11,7 +11,7 @@
 /* الفيديو Responsive */
 .video-container{
     position: relative;
-    width: 100%;
+    width: 100%; 
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
@@ -113,13 +113,12 @@ margin:20px 20px ;
 	border-radius:20px;
 }
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-
 .p-categs0{
     display: inline-block;
     margin: 10px 8px 10px 0;
     font-size: 25px;
     font-weight: bold;
-    color: #222;
+    color: #c1cdcd;
 }
 
 .a-p-categs0{
