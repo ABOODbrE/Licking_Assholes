@@ -68,30 +68,63 @@
     color: #bf4f51;
 }
 
-/* التصنيفات */
-.tagsWrapper,
-.categsWrapper {
-	display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
+.infoWrapper{
+    display:flex;
+    gap:20px;
+    width:100%;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    box-sizing:border-box;
 }
 
-.Video_tags {
-    margin: 0;
-    font-weight: bold;
+/* الديفين */
+.categsWrapper,
+.tagsWrapper{
+    flex:1 1 350px;
+    background:#161616;
+    padding:15px;
+    border-radius:12px;
+    box-sizing:border-box;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
 }
 
-.item {
-    text-decoration: none;
+/* العنوان */
+.Video_tags{
+    width:100%;
+    margin:0 0 10px;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
 }
 
-.Video_span {
-    background: #ff91af;
-    padding: 5px 10px;
-    border-radius: 20px;
-    display: inline-block;
-	color:black;
+/* الروابط */
+.item{
+    text-decoration:none;
+}
+
+/* شكل الـ tags */
+.Video_span{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:7px 14px;
+    border-radius:30px;
+
+    background:#2d2d2d;
+    color:#fff;
+
+    font-size:14px;
+    transition:0.3s ease;
+}
+
+.Video_span:hover{
+    background:#ff4d4d;
+    transform:translateY(-2px);
 }
 
 
@@ -115,8 +148,19 @@
     .P-descr{
         font-size: 18px;
     }
+	
+	 .infoWrapper{
+        flex-direction:column;
+    }
 
-    .Video_tags{
+    .categsWrapper,
+    .tagsWrapper{
+        width:100%;
+    }
+
+
+    /*
+	.Video_tags{
         font-size: 16px;
     }
 
@@ -124,6 +168,7 @@
         font-size: 13px;
         padding: 7px 14px;
     }
+	*/
 
 }
 
@@ -145,15 +190,7 @@
         font-size: 17px;
     }
 
-    .tagsWrapper,
-    .categoryWrapper{
-        gap: 8px;
-    }
-
-    .Video_span{
-        font-size: 12px;
-        padding: 6px 12px;
-    }
+    
 
 }
 .Ads-Under-Iframe{
