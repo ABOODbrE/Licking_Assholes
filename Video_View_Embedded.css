@@ -58,7 +58,7 @@
     font-weight: bold;
     color: #fff;
 }
-.div-tags1{width:550px;height:300px;}
+/*.div-tags1{width:550px;height:300px;}
 .Video_Categ,
 .Video_Tag{
     font-size: 18px;
@@ -86,7 +86,7 @@
 .span-cat:hover{
     background: #ff3c3c;
 }
-
+*/
 @media (max-width:768px){
 
     .EP{
