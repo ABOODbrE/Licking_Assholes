@@ -1,1 +1,204 @@
+/* الحاوية الرئيسية */
+.EP{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+/* الفيديو Responsive */
+.video-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #000;
+}
+
+.video-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* عنوان الفيديو */
+.Title_video{
+    margin-top: 18px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #fff;
+    word-break: break-word;
+}
+
+/* الوصف */
+.description{
+    margin-top: 20px;
+    padding: 18px;
+    background: #1c1c1c;
+    border-radius: 12px;
+    color: #ccc;
+    line-height: 1.9;
+    font-size: 22px;
+    word-break: break-word;
+}
+
+/* عنوان الوصف */
+.P-descr{
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* أقسام */
+.Video_tags{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #bf4f51;
+}
+
+.infoWrapper{
+    display:flex;
+    gap:20px;
+    width:100%;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    box-sizing:border-box;
+}
+
+/* الديفين */
+.categsWrapper,
+.tagsWrapper{
+    flex:1 1 350px;
+    background:#161616;
+    padding:15px;
+    border-radius:12px;
+    box-sizing:border-box;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
+}
+
+/* العنوان */
+.Video_tags{
+    width:100%;
+    margin:0 0 10px;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+}
+
+/* الروابط */
+.item{
+    text-decoration:none;
+}
+
+/* شكل الـ tags */
+.Video_span{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:7px 14px;
+    border-radius:30px;
+
+    background:#2d2d2d;
+    color:#fff;
+
+    font-size:14px;
+    transition:0.3s ease;
+}
+
+.Video_span:hover{
+    background:#ff4d4d;
+    transform:translateY(-2px);
+}
+
+
+
+/* تابلت */
+@media (max-width: 768px){
+
+    .EP{
+        padding: 12px;
+    }
+
+    .Title_video{
+        font-size: 21px;
+    }
+
+    .description{
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    .P-descr{
+        font-size: 18px;
+    }
+	
+	 .infoWrapper{
+        flex-direction:column;
+    }
+
+    .categsWrapper,
+    .tagsWrapper{
+        width:100%;
+    }
+
+
+    /*
+	.Video_tags{
+        font-size: 16px;
+    }
+
+    .Video_span{
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+	*/
+
+}
+
+/* موبايل */
+@media (max-width: 480px){
+
+    .Title_video{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .description{
+        font-size: 14px;
+        line-height: 1.8;
+        padding: 14px;
+    }
+
+    .P-descr{
+        font-size: 17px;
+    }
+
+    
+
+}
+.Ads-Under-Iframe{
+border-radius:40px;
+padding:20px 20px ;
+margin:20px 20px ;
+}
+.My-Ads-Under-Iframe{
+	height:180px;
+	border-radius:20px;
+}
