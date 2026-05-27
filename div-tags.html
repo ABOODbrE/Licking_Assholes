@@ -1,23 +1,87 @@
-<div class="infoWrapper">
-<div class="categsWrapper">
-<p class="Video_tags">Categories </p>
-<a class="gtm-event-video-underplayer item" data-event="video_underplayer" 
-data-label="category" href="">
-<span class="Video_span" >Amateur</span>
+<div class="d-categs-tags">
+
+<div class="div-categs0">
+<p class="p_categs0">Categories : </p>
+<a class="a-p-categs0" href="">
+<span class="Video_span1">amateur</span>
+</a>
+<a class="a-p-categs0" href="">
+<span class="Video_span1">amateur</span>
 </a>
 </div>
 
-<div class="tagsWrapper">
-<p class="Video_tags">Tags</p>
+<div class="div-tags0">
+<p class="p_tags0">Tags : </p>
 <br>
-<a data-event="video_underplayer" data-label="tag" 
-class="gtm-event-video-underplayer item" href="">
-<span class="Video_span">amateur</span>
+<a class="a-p-tags0" href="">
+<span class="Video_span2">amateur</span>
 </a> 
-<br>
-<a data-event="video_underplayer" data-label="tag" 
-class="gtm-event-video-underplayer item" href="">
-<span class="Video_span">shortest girl</span>
-</a> 
+<a class="a-p-tags0" href="">
+<span class="Video_span2">amateur</span>
+</a>
+
 </div>
 </div>
+<style>
+.d-categs-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* كل مجموعة (categories / tags) */
+.div-categs0,
+.div-tags0 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* مهم عشان الشاشات الصغيرة */
+    gap: 10px;
+}
+
+/* العناوين */
+.p_categs0,
+.p_tags0 {
+    margin: 0;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* الروابط */
+.a-p-categs0,
+.a-p-tags0 {
+    text-decoration: none;
+}
+
+/* شكل الـ span */
+.Video_span1,
+.Video_span2 {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #ff91af;
+    border-radius: 20px;
+    font-size: 25px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* hover */
+.Video_span1:hover,
+.Video_span2:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* تحسين التوافق مع الشاشات الصغيرة */
+@media (max-width: 600px) {
+  .div-categs0,
+  .div-tags0 {
+    gap: 6px;
+  }
+
+  .Video_span1,
+  .Video_span2 {
+    font-size: 13px;
+    padding: 3px 8px;
+  }
+}
+</style>
