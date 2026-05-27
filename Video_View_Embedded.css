@@ -58,6 +58,50 @@
     font-weight: bold;
     color: #fff;
 }
+.div-tags1 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* كل مجموعة (Categories / Tags) */
+.div-Video_Categ,
+.div-Video_tag {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* العنوان */
+.Video_Categ,
+.Video_Tag {
+  margin: 0;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* شكل التاجات */
+.a-cat {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.span-cat {
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 34px;
+  white-space: nowrap;
+}
+
+/* تحسين الموبايل */
+@media (max-width: 480px) {
+  .span-cat {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
 /*.div-tags1{width:550px;height:300px;}
 .Video_Categ,
 .Video_Tag{
