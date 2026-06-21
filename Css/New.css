@@ -1492,6 +1492,121 @@ border-radius:20px;
 /* ___________________________________________________________________________________________________________________________________________________ */
 
 
+/* ___________________________________________________________________________________________________________________________________________________ */
+/* _______________________________________________________________________ START Mixed.css _____________________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________________ */
+/* الحاوية الرئيسية */
+.mixed{
+    width:100%;
+    padding:10px;
+    box-sizing:border-box;
+    background:transparent;
+}
+
+/* شبكة العناصر */
+.mixed .mixed-page{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:15px;
+    width:100%;
+}
+
+/* البطاقة */
+.mixed .video_div{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:10px;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+/* الرابط */
+.mixed .video_link{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
+/* الصورة */
+.mixed .video_img{
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    display:block;
+}
+
+/* العنوان */
+.mixed .video_title{
+    margin:0;
+    padding:12px;
+    color:#fff;
+    font-size:15px;
+    line-height:1.7;
+    font-weight:600;
+    text-align:center;
+
+    /* إظهار النص كاملاً */
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:break-word;
+
+    /* تحسين القراءة */
+    text-shadow:
+        1px 1px 2px rgba(0,0,0,.9),
+       -1px -1px 2px rgba(0,0,0,.9);
+}
+
+/* pagination */
+.mixed .mixed-pagination{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:20px;
+}
+
+.mixed .mixed-pagination button{
+    padding:8px 14px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#e0e0e0;
+}
+
+.mixed .mixed-pagination button.active{
+    background:#007bff;
+    color:#fff;
+}
+
+/* تابلت */
+@media (max-width:991px){
+    .mixed .mixed-page{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+/* موبايل */
+@media (max-width:767px){
+    .mixed .mixed-page{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .mixed .video_title{
+        font-size:14px;
+    }
+}
+
+/* شاشات صغيرة جداً */
+@media (max-width:480px){
+    .mixed .mixed-page{
+        grid-template-columns:1fr;
+    }
+}
+/* ___________________________________________________________________________________________________________________________________________________ */
+/*_______________________________________________________________________ END Mixed.css _____________________________________________________________________*/
+/* ___________________________________________________________________________________________________________________________________________________ */
+
 /* ----------------------------------------------------------------------------- */
 /* START  */
 
