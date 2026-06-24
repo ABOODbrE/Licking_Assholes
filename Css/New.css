@@ -1373,6 +1373,7 @@ margin:20px 20px ;
     display:inline-block;
     margin:10px 5px 10px 0;
     font-weight:bold;
+	
 }
 
 /* التاجات */
@@ -1404,6 +1405,9 @@ margin:20px 20px ;
     box-sizing:border-box;
 
     transition:.3s;
+	width:fit-content !important;
+max-width:fit-content !important;
+display:inline-flex !important;
 }
 
 .a-p-categs0:hover{
@@ -1418,9 +1422,47 @@ margin:20px 20px ;
     }
 
     .a-p-categs0{
-        min-width:90px;
-        height:36px;
-        font-size:14px;
+        display:inline-flex;
+        width:auto;
+        min-width:auto;
+        max-width:max-content;
+
+        height:32px;
+        padding:0 12px;
+        margin:3px;
+
+        font-size:13px;
+        line-height:32px;
+
+        white-space:nowrap;
+        flex-shrink:0;
+    }
+}
+
+/* تابلت */
+@media (max-width:768px){
+    .a-p-categs0{
+        height:32px;
+        padding:0 12px;
+        font-size:13px;
+    }
+}
+
+/* هواتف متوسطة */
+@media (max-width:480px){
+    .a-p-categs0{
+        height:30px;
+        padding:0 10px;
+        font-size:12px;
+    }
+}
+
+/* هواتف صغيرة جداً */
+@media (max-width:360px){
+    .a-p-categs0{
+        height:28px;
+        padding:0 8px;
+        font-size:11px;
     }
 }
 
