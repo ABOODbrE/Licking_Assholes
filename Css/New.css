@@ -1356,7 +1356,15 @@ margin:20px 20px ;
     height:auto;
     display:inline-block;
 }
-
+/* عنوان الفيديو */
+.Title_video{
+	margin-top: 18px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #fff;
+    word-break: break-word;
+}
 /* الوصف */
 .description{
     line-height:1.8;
