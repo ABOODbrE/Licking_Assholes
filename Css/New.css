@@ -1368,7 +1368,7 @@ margin:20px 20px ;
 /* الوصف */
 .description{
     line-height:1.8;
-    font-size:clamp(14px,2vw,18px);
+    font-size:22px;
     word-wrap:break-word;
 }
 
