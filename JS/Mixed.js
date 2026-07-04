@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const mixed = document.querySelector(".mixed");
     const items = [...mixed.querySelectorAll(".video_div")];
 
-    const perPage = 12;
+    const perPage = 40;
     const pageCount = Math.ceil(items.length / perPage);
 
     mixed.innerHTML = "";
