@@ -1,93 +1,98 @@
-const slider = document.querySelector(".Dthumbinal-slide");
-const nextBtn = document.querySelector(".slider-next");
-const prevBtn = document.querySelector(".slider-prev");
+<script>
+<![CDATA[
+document.addEventListener("DOMContentLoaded", function () {
 
+    const slider = document.querySelector(".Dthumbinal-slide");
+    const nextBtn = document.querySelector(".slider-next");
+    const prevBtn = document.querySelector(".slider-prev");
 
-let autoSlide;
+    if (!slider || !nextBtn || !prevBtn) {
+        return;
+    }
 
+    let autoSlide;
 
-function moveNext(){
+    function moveNext() {
 
-    slider.scrollLeft += slider.clientWidth / 4;
+        const amount = slider.clientWidth / 4;
 
+        if (
+            slider.scrollLeft + slider.clientWidth
+            >= slider.scrollWidth - 5
+        ) {
 
-    if(
-      slider.scrollLeft + slider.clientWidth 
-      >= slider.scrollWidth
-    ){
+            slider.scrollTo({
+                left: 0,
+                behavior: "smooth"
+            });
 
-        slider.scrollLeft = 0;
+        } else {
+
+            slider.scrollBy({
+                left: amount,
+                behavior: "smooth"
+            });
+
+        }
 
     }
 
-}
 
+    function movePrev() {
 
+        const amount = slider.clientWidth / 4;
 
-function movePrev(){
+        if (slider.scrollLeft <= 5) {
 
-    slider.scrollLeft -= slider.clientWidth / 4;
+            slider.scrollTo({
+                left: slider.scrollWidth - slider.clientWidth,
+                behavior: "smooth"
+            });
 
+        } else {
 
-    if(slider.scrollLeft <=0){
+            slider.scrollBy({
+                left: -amount,
+                behavior: "smooth"
+            });
 
-        slider.scrollLeft =
-        slider.scrollWidth;
+        }
 
     }
 
-}
+
+    nextBtn.addEventListener("click", moveNext);
+
+    prevBtn.addEventListener("click", movePrev);
 
 
+    function startAuto() {
 
-nextBtn.onclick=function(){
+        stopAuto();
 
-    moveNext();
+        autoSlide = setInterval(function () {
+            moveNext();
+        }, 3000);
 
-}
-
-
-
-prevBtn.onclick=function(){
-
-    movePrev();
-
-}
+    }
 
 
+    function stopAuto() {
 
-/* AUTO PLAY */
+        if (autoSlide) {
+            clearInterval(autoSlide);
+        }
 
-function startAuto(){
-
-autoSlide=setInterval(
-moveNext,
-3000
-);
-
-}
+    }
 
 
+    slider.addEventListener("mouseenter", stopAuto);
 
-function stopAuto(){
-
-clearInterval(autoSlide);
-
-}
+    slider.addEventListener("mouseleave", startAuto);
 
 
+    startAuto();
 
-slider.addEventListener(
-"mouseenter",
-stopAuto
-);
-
-
-slider.addEventListener(
-"mouseleave",
-startAuto
-);
-
-
-
-startAuto();
+});
+]]>
+</script>
