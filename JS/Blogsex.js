@@ -1,4 +1,3 @@
-<script>
 const slider = document.querySelector(".Dthumbinal-slide");
 const nextBtn = document.querySelector(".slider-next");
 const prevBtn = document.querySelector(".slider-prev");
@@ -92,4 +91,3 @@ startAuto
 
 
 startAuto();
-</script>
