@@ -13,7 +13,60 @@ data-was-processed="true"></a>
 </div>
 
 </body>
+<style>
+.Ads-Under-Img-embed {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
+.Ads-Under-Img-link {
+    display: block;
+    width: 100%;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.My-Ads-Under-Img-embed {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* الشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .Ads-Under-Img-embed {
+        max-width: 100%;
+    }
+}
+
+/* الأجهزة اللوحية */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .Ads-Under-Img-embed {
+        width: 100%;
+    }
+}
+
+/* الهواتف */
+@media (max-width: 767px) {
+    .Ads-Under-Img-embed {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .My-Ads-Under-Img-embed {
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
 <!--
 
 3:Unzipvr
