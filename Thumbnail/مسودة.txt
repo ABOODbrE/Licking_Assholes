@@ -1,0 +1,24 @@
+https://www.xvideos.com/tags/anal-licking : 
+___________________________________________
+
+
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INSERT INTO `videos`( `Embed`,`Slug`,`Title`,`Alt`,`Img_Link`,`Duration`,`Description`,`Category`,`Ads_Code`,`Categories`,`Tags`,`Reg_Date`)
+VALUES(
+':Embed',
+REPLACE(':Slug', ' ', '-'),
+':Title',
+':Alt',
+':Img_Link',
+':Duration 00:00',
+':Description',
+':Category',
+':Ads_Code',
+':Categories',
+':Tags',
+CURDATE());
