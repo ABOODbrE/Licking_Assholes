@@ -1,0 +1,82 @@
+.Search_Container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.Search_Container form {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.Search_Input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.Search_Input:focus {
+    border-color: #007bff;
+}
+
+.Search_Button {
+    padding: 0 18px;
+    border: 1px solid #007bff;
+    border-radius: 0 8px 8px 0;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.Search_Button:hover {
+    background: #0056b3;
+}
+
+.Videos_Grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.Video_Card {
+    min-width: 0;
+}
+
+.Video_Card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.Video_Card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.Video_Card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.Video_Card p {
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .Videos_Grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .Videos_Grid {
+        grid-template-columns: 1fr;
+    }
+}
