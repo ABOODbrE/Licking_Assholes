@@ -1,0 +1,316 @@
+/* الحاوية الرئيسية */
+.Parent_Blog_Div {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+/* عنصر المقالة */
+.Blog_Div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 0;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/* رابط المقالة ومحتواها */
+.Blog_Div > a {
+    display: grid;
+    grid-template-columns: minmax(180px, 32%) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 25px;
+    row-gap: 12px;
+    align-items: start;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/* الصورة الرمزية */
+.Blog_Div_Img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* عنوان المقالة */
+.Blog_Div h2 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(18px, 2vw, 26px);
+    line-height: 1.5;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+/* نص المقالة */
+.Blog_Div_Text {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(14px, 1.2vw, 17px);
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+}
+
+/* الإعلان */
+.Blog_Ads {
+    width: 100%;
+    max-width: 700px;
+    margin: 25px auto 0;
+    padding: 0;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.Blog_Ads embed {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+/* التابلت */
+@media (max-width: 900px) {
+    .Parent_Blog_Div {
+        padding: 15px 12px;
+    }
+
+    .Blog_Div > a {
+        grid-template-columns: minmax(150px, 35%) minmax(0, 1fr);
+        column-gap: 18px;
+        row-gap: 8px;
+    }
+
+    .Blog_Div_Img {
+        border-radius: 10px;
+    }
+
+    .Blog_Div_Text {
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
+}
+
+/* الهواتف */
+@media (max-width: 600px) {
+    .Parent_Blog_Div {
+        padding: 10px;
+    }
+
+    .Blog_Div {
+        margin-bottom: 20px;
+    }
+
+    .Blog_Div > a {
+        grid-template-columns: minmax(100px, 34%) minmax(0, 1fr);
+        column-gap: 12px;
+        row-gap: 6px;
+    }
+
+    .Blog_Div_Img {
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+    }
+
+    .Blog_Div h2 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .Blog_Div_Text {
+        font-size: 13px;
+        line-height: 1.6;
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
+
+    .Blog_Ads {
+        margin-top: 18px;
+    }
+
+    .Blog_Ads embed {
+        height: 180px;
+        border-radius: 12px;
+    }
+}
+
+/* الهواتف الصغيرة */
+@media (max-width: 360px) {
+    .Blog_Div > a {
+        grid-template-columns: 90px minmax(0, 1fr);
+        column-gap: 10px;
+    }
+
+    .Blog_Div h2 {
+        font-size: 14px;
+    }
+
+    .Blog_Div_Text {
+        font-size: 12px;
+        line-height: 1.5;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+}
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+/* =========================================================
+   Blog Pagination
+========================================================= */
+
+.Blog_Pagination {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 30px 0;
+    padding: 0 10px;
+}
+
+
+/* =========================================================
+   جميع روابط Pagination
+========================================================= */
+
+.Blog_Pagination a {
+    min-width: 42px;
+    height: 42px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+
+    background: #ffffff;
+    color: #222222;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* =========================================================
+   Hover
+========================================================= */
+
+.Blog_Pagination a:hover {
+    background: #FFD700;
+    color: #222222;
+    border-color: #FFD700;
+}
+
+
+/* =========================================================
+   الصفحة الحالية
+========================================================= */
+
+.Blog_Pagination a.Active_Page {
+    background: #FFD700;
+    color: #222222;
+    border-color: #FFD700;
+}
+
+
+/* =========================================================
+   Previous + Next
+========================================================= */
+
+.Blog_Pagination .Pagination_Previous,
+.Blog_Pagination .Pagination_Next {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+/* =========================================================
+   Previous + Next Hover
+========================================================= */
+
+.Blog_Pagination .Pagination_Previous:hover,
+.Blog_Pagination .Pagination_Next:hover {
+    background: #FFD700;
+    color: #222222;
+    border-color: #FFD700;
+}
+
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .Blog_Pagination {
+        gap: 6px;
+
+        margin: 25px 0;
+
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
+    .Blog_Pagination a {
+        min-width: 38px;
+        height: 38px;
+
+        padding-left: 9px;
+        padding-right: 9px;
+
+        font-size: 14px;
+    }
+
+
+    .Blog_Pagination .Pagination_Previous,
+    .Blog_Pagination .Pagination_Next {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+
+}
