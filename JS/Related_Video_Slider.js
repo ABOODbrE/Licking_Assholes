@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const slider = document.querySelector(".Related_Video_Slider");
@@ -18,20 +19,54 @@ document.addEventListener("DOMContentLoaded", function () {
        SETTINGS
        ===================================================== */
 
-    const ITEMS_PER_PAGE = 9;
-
-    /* وقت الانتقال التلقائي */
     const AUTO_TIME = 3500;
 
-    let articles =
-        Array.from(grid.querySelectorAll(".Article_Vid1"));
+    const DESKTOP_ITEMS = 9;
+    const MOBILE_ITEMS = 6;
+
+    const MOBILE_BREAKPOINT = 450;
+
+    let articles = Array.from(
+        grid.querySelectorAll(".Article_Vid1")
+    );
 
     let currentPage = 0;
+    let itemsPerPage = DESKTOP_ITEMS;
+    let totalPages = 0;
 
-    let totalPages =
-        Math.ceil(articles.length / ITEMS_PER_PAGE);
+    let autoSlider = null;
 
-    let autoSlider;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    let resizeTimer = null;
+
+
+    /* =====================================================
+       RESPONSIVE SETTINGS
+       ===================================================== */
+
+    function getSettings() {
+
+        if (window.innerWidth <= MOBILE_BREAKPOINT) {
+
+            return {
+                items: 6,
+                columns: 2,
+                rows: 3,
+                gap: "12px 8px"
+            };
+
+        }
+
+        return {
+            items: 9,
+            columns: 3,
+            rows: 3,
+            gap: "20px 15px"
+        };
+
+    }
 
 
     /* =====================================================
@@ -40,56 +75,85 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function createPages() {
 
-        if (articles.length === 0) {
-            return;
-        }
+        const settings = getSettings();
+
+        itemsPerPage = settings.items;
+
+        totalPages = Math.ceil(
+            articles.length / itemsPerPage
+        );
 
         /*
-         * كل 9 Articles يتم وضعهم في صفحة.
+         * Remove old pages.
          */
 
-        for (let i = 0; i < articles.length; i += ITEMS_PER_PAGE) {
+        grid.replaceChildren();
 
-            const pageArticles =
-                articles.slice(i, i + ITEMS_PER_PAGE);
+        /*
+         * Create new pages.
+         */
 
-            const page =
-                document.createElement("div");
+        for (
+            let i = 0;
+            i < articles.length;
+            i += itemsPerPage
+        ) {
 
-            page.className =
-                "Related_Slider_Page";
+            const pageArticles = articles.slice(
+                i,
+                i + itemsPerPage
+            );
+
+            const page = document.createElement("div");
+
+            page.className = "Related_Slider_Page";
 
             page.style.display = "grid";
+
             page.style.gridTemplateColumns =
-                "repeat(3, minmax(0, 1fr))";
+                `repeat(${settings.columns}, minmax(0, 1fr))`;
 
             page.style.gridTemplateRows =
-                "repeat(3, auto)";
+                `repeat(${settings.rows}, auto)`;
 
-            page.style.gap = "20px 15px";
+            page.style.gap = settings.gap;
 
             page.style.width = "100%";
+
+            page.style.minWidth = "100%";
+
             page.style.flex = "0 0 100%";
 
+            page.style.boxSizing = "border-box";
+
+            /*
+             * Add videos to page.
+             */
+
             pageArticles.forEach(article => {
+
                 page.appendChild(article);
+
             });
 
             grid.appendChild(page);
+
         }
 
+
         /*
-         * grid نفسه يتحول إلى flex
-         * وكل صفحة تأخذ 100% من العرض.
+         * Main slider.
          */
 
         grid.style.display = "flex";
+
         grid.style.width = "100%";
 
         grid.style.transition =
             "transform 0.8s ease-in-out";
 
         grid.style.willChange = "transform";
+
     }
 
 
@@ -103,8 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         for (let i = 0; i < totalPages; i++) {
 
-            const dot =
-                document.createElement("button");
+            const dot = document.createElement("button");
 
             dot.type = "button";
 
@@ -122,9 +185,11 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             dotsContainer.appendChild(dot);
+
         }
 
         updateDots();
+
     }
 
 
@@ -138,10 +203,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        /*
-         * عند الوصول للنهاية نرجع للبداية.
-         */
-
         if (page >= totalPages) {
             page = 0;
         }
@@ -152,13 +213,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         currentPage = page;
 
-        const offset =
-            currentPage * 100;
+        const offset = currentPage * 100;
 
         grid.style.transform =
             "translateX(-" + offset + "%)";
 
         updateDots();
+
     }
 
 
@@ -179,6 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
         });
+
     }
 
 
@@ -188,14 +250,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function nextSlide() {
 
-        let nextPage =
-            currentPage + 1;
+        goToPage(currentPage + 1);
 
-        if (nextPage >= totalPages) {
-            nextPage = 0;
-        }
-
-        goToPage(nextPage);
     }
 
 
@@ -205,14 +261,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function previousSlide() {
 
-        let previousPage =
-            currentPage - 1;
+        goToPage(currentPage - 1);
 
-        if (previousPage < 0) {
-            previousPage = totalPages - 1;
-        }
-
-        goToPage(previousPage);
     }
 
 
@@ -246,23 +296,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
         stopAutoSlider();
 
-        autoSlider =
-            setInterval(function () {
+        if (totalPages <= 1) {
+            return;
+        }
 
-                nextSlide();
+        autoSlider = setInterval(function () {
 
-            }, AUTO_TIME);
+            nextSlide();
+
+        }, AUTO_TIME);
+
     }
 
 
     function stopAutoSlider() {
 
-        if (autoSlider) {
+        if (autoSlider !== null) {
 
             clearInterval(autoSlider);
 
             autoSlider = null;
+
         }
+
     }
 
 
@@ -271,11 +327,12 @@ document.addEventListener("DOMContentLoaded", function () {
         stopAutoSlider();
 
         startAutoSlider();
+
     }
 
 
     /* =====================================================
-       PAUSE WHEN MOUSE IS OVER SLIDER
+       PAUSE ON MOUSE HOVER
        ===================================================== */
 
     slider.addEventListener("mouseenter", function () {
@@ -295,9 +352,6 @@ document.addEventListener("DOMContentLoaded", function () {
     /* =====================================================
        TOUCH / SWIPE
        ===================================================== */
-
-    let touchStartX = 0;
-    let touchEndX = 0;
 
     slider.addEventListener(
         "touchstart",
@@ -323,19 +377,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const distance =
                 touchEndX - touchStartX;
 
-            /*
-             * Swipe left
-             */
-
             if (distance < -50) {
 
                 nextSlide();
 
             }
-
-            /*
-             * Swipe right
-             */
 
             else if (distance > 50) {
 
@@ -351,7 +397,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       START
+       RESPONSIVE REBUILD
+       ===================================================== */
+
+    function rebuildSlider() {
+
+        /*
+         * Preserve approximately the same
+         * first visible video.
+         */
+
+        const oldFirstIndex =
+            currentPage * itemsPerPage;
+
+        stopAutoSlider();
+
+        createPages();
+
+        currentPage = Math.floor(
+            oldFirstIndex / itemsPerPage
+        );
+
+        if (currentPage >= totalPages) {
+            currentPage = Math.max(0, totalPages - 1);
+        }
+
+        createDots();
+
+        goToPage(currentPage);
+
+        startAutoSlider();
+
+    }
+
+
+    /* =====================================================
+       WINDOW RESIZE
+       ===================================================== */
+
+    window.addEventListener("resize", function () {
+
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(function () {
+
+            rebuildSlider();
+
+        }, 200);
+
+    });
+
+
+    /* =====================================================
+       START SLIDER
        ===================================================== */
 
     createPages();
