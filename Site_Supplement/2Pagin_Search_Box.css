@@ -1,0 +1,51 @@
+  .Search_Results {
+            width: 100%;
+            max-width: 1400px;
+            margin: 25px auto;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+
+        .Search_Results_Grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .Search_Result_Card {
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .Search_Result_Card a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .Search_Result_Image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .Search_Result_Title {
+            overflow-wrap: anywhere;
+        }
+
+        .Search_Result_Description {
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 900px) {
+            .Search_Results_Grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 550px) {
+            .Search_Results_Grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
