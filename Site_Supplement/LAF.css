@@ -2156,7 +2156,7 @@
 
 /* Mobile */
 
-@media (max-width: 450px) {
+@media screen and (max-width: 449px) {
     .Related_Video1 {
         width: 100%;
         max-width: 100%;
