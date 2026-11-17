@@ -68,7 +68,7 @@
 
             if (timer) clearTimeout(timer);
 
-            timer = setTimeout(showNextAd, 500);
+            timer = setTimeout(showNextAd, Time(2, 'seconds'));
         }
 
         box.addEventListener('click', function (event) {
