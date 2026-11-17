@@ -85,7 +85,7 @@
 // مدة عرض الإعلان
 //const AD_DISPLAY_TIME = Time(5, 'minutes');
 
-const AD_DISPLAY_TIME = Time(5, 'seconds');
+const AD_DISPLAY_TIME = Time(1, 'seconds');
 
 function showNextAd() {
     if (!ads.length) return;
