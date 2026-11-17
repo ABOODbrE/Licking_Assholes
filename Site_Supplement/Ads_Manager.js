@@ -51,6 +51,7 @@
         let timer = null;
         let activeAdId = null;
 
+    /*
         function showNextAd() {
             if (!ads.length) return;
 
@@ -70,6 +71,41 @@
 
             timer = setTimeout(showNextAd, 5000);
         }
+    */
+        function Time(value, unit = 'seconds') {
+    const units = {
+        seconds: 1000,
+        minutes: 60 * 1000,
+        hours: 60 * 60 * 1000
+    };
+
+    return value * units[unit];
+}
+
+// مدة عرض الإعلان
+//const AD_DISPLAY_TIME = Time(5, 'minutes');
+
+const AD_DISPLAY_TIME = Time(5, 'seconds');
+
+function showNextAd() {
+    if (!ads.length) return;
+
+    currentIndex = (currentIndex + 1) % ads.length;
+
+    const ad = ads[currentIndex];
+
+    activeAdId = ad.Id;
+
+    box.innerHTML = ad.Ads_Code || '';
+
+    activateScripts(box);
+
+    sendStat('impression', ad.Id, location);
+
+    if (timer) clearTimeout(timer);
+
+    timer = setTimeout(showNextAd, AD_DISPLAY_TIME);
+}
 
         box.addEventListener('click', function (event) {
             const link = event.target.closest('a');
