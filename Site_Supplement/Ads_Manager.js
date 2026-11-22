@@ -2,7 +2,9 @@
 (function () {
     'use strict';
 //https://www.lickingassholes.com/
-    const managerUrl = '/La/Ads_Manager.php';
+//https://www.lickingassholes.com/
+// const managerUrl = '/La/Ads_Manager.php';
+    const managerUrl = 'https://www.lickingassholes.com/Ads_Manager.php';
 
     function sendStat(action, id, location) {
         const body = new URLSearchParams({
